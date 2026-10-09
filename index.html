@@ -4,98 +4,243 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Eleni Mandana · AI engineer</title>
-  <meta name="description" content="Eleni Mandana is an AI engineer building and evaluating LLM agents, from voice agents to retrieval and LLM-as-a-judge testing.">
-  <meta name="theme-color" content="#14161F">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314161F'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='16' font-weight='700' text-anchor='middle' fill='%23FF7A59'%3EEM%3C/text%3E%3C/svg%3E">
+  <meta name="description" content="Eleni Mandana is an AI engineer building and testing secure LLM systems: voice agents, retrieval and LLM-as-a-judge evaluation.">
+  <meta name="theme-color" content="#0A0F1F">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230A0F1F'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='15' font-weight='700' text-anchor='middle' fill='%236EE7C8'%3EEM%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script>document.documentElement.classList.add('js')</script>
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261012">
+  <script>
+    // Content fades in on scroll only while the script is running; if app.js never starts, show everything.
+    document.documentElement.classList.add('js');
+    setTimeout(function () { if (!window.__portfolio) document.documentElement.classList.remove('js'); }, 2000);
+  </script>
+  <script src="app.js?v=20261012" defer></script>
 </head>
-<body>
-  <div class="wrap">
-    <main>
-      <h1 class="sr-only">Eleni Mandana, AI engineer building and evaluating LLM agents</h1>
+<body id="top">
+  <a class="skip" href="#experience">Skip to content</a>
 
-      <div id="convo" class="convo">
-        <article class="turn" data-id="about">
-          <p class="q">Tell me about yourself.</p>
-          <div class="a">
-            <p class="lead stream">Hello there, I'm <span class="hi">Eleni</span>.</p>
-            <p class="stream">I'm an AI engineer who builds LLM agents and the systems around them: retrieval, guardrails and the evaluation that shows they're ready for production. I like turning ideas into software that holds up with real users.</p>
-            <p class="tool"><span class="kind">tool</span> get_profile()</p>
-            <ul class="bullets">
-              <li><strong>Focus</strong> LLM agents, LLM-as-a-judge evaluation, retrieval, applied machine learning</li>
-              <li><strong>Stack</strong> Python, FastAPI, PyTorch, vector DBs (Milvus), LiveKit, SQL</li>
-              <li><strong>Education</strong> BSc Computer Science, MSc Data and Web Science</li>
-              <li class="open"><strong>Status</strong> Open to work · AI/ML Engineer/Data Science positions</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="turn" data-id="experience">
-          <p class="q">What is your experience?</p>
-          <div class="a">
-            <p class="tool"><span class="kind">tool</span> get_experience() <span class="result">· 1 result</span></p>
-            <ul class="bullets">
-              <li>
-                <strong>AI engineer at Nairon</strong> <span class="when">2025 to 2026</span>
-                <p>I built and tested production voice agents, from conversational logic and safety guardrails to hybrid retrieval. I also built a simulator that evaluates and red-teams them, grading each run with an LLM judge.</p>
-                <p class="stack">LLM Agents · LiveKit · RAG · Milvus · LLM-as-judge · FastAPI</p>
-              </li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="turn" data-id="more">
-          <p class="q">What else?</p>
-          <div class="a">
-            <h3 class="part">Projects</h3>
-            <p class="tool"><span class="kind">tool</span> get_projects() <span class="result">· 3 results</span></p>
-            <ul class="tiles">
-              <li>
-                <div class="tile">
-                  <span class="t-title">SRT corrector</span>
-                  <span class="t-desc">Spelling and grammar fixes for subtitles</span>
-                </div>
-              </li>
-              <li>
-                <a class="tile" href="https://www.mdpi.com/2079-9292/14/16/3226">
-                  <span class="t-title">Smart contract vulnerability detection</span>
-                  <span class="t-desc">94.78% accuracy with QLoRA</span>
-                </a>
-              </li>
-              <li>
-                <a class="tile" href="https://ikee.lib.auth.gr/record/352041/?ln=en">
-                  <span class="t-title">Fake account detection</span>
-                  <span class="t-desc">BSc thesis, F1 of 0.997 with LightGBM</span>
-                </a>
-              </li>
-            </ul>
-            <p class="more"><a class="ext" href="https://github.com/helenmand">More on GitHub</a></p>
-
-            <h3 class="part">Contact</h3>
-            <p class="stream">Send me a message on <a class="ext" href="https://www.linkedin.com/in/elenimandana/">LinkedIn</a> if you'd like to connect. You can also send me an <a class="ext" href="mailto:elemandana@gmail.com">email</a>.</p>
-          </div>
-        </article>
-      </div>
-
-    </main>
-
-    <div class="dock">
-      <div class="dock-inner">
-        <div class="composer">
-          <div id="typed" class="typed" role="textbox" aria-readonly="true" aria-label="Message" data-placeholder="Ask me anything"></div>
-          <button type="button" id="send" class="send" aria-label="Send" aria-disabled="true">
-            <svg class="i-send" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-            <svg class="i-stop" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" hidden><path d="M6 6h12v12H6z"/></svg>
-          </button>
-        </div>
-        <p id="hint" class="hint"></p>
+  <header class="nav">
+    <div class="nav-in">
+      <a class="brand" href="#top" aria-label="Eleni Mandana, back to top"><span class="brand-long">Eleni Mandana</span><span class="brand-short" aria-hidden="true">EM</span></a>
+      <nav aria-label="Sections">
+        <a href="#experience">experience</a>
+        <a href="#education">education</a>
+        <a href="#projects">projects</a>
+      </nav>
+      <div class="social">
+        <a href="mailto:elemandana@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M3 6.5h18v11H3zM3.5 7l8.5 6.5L20.5 7"/></svg>
+        </a>
+        <a href="https://github.com/helenmand" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="fill"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/elenimandana/" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="fill"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.83v1.54h.05c.53-1 1.84-2.07 3.78-2.07 4.04 0 4.79 2.66 4.79 6.12V21h-4v-5.07c0-1.21-.02-2.77-1.69-2.77-1.69 0-1.95 1.32-1.95 2.68V21h-4z"/></svg>
+        </a>
       </div>
     </div>
-  </div>
+  </header>
+
+  <main>
+    <section id="hello" class="hero" aria-labelledby="hero-title">
+      <canvas id="graph" aria-hidden="true"></canvas>
+
+      <div class="hero-in">
+        <p class="status"><span class="dot" aria-hidden="true"></span>open to work</p>
+        <h1 id="hero-title">hi, <em>Eleni</em> here<span class="caret" aria-hidden="true"></span></h1>
+        <p class="lead">AI engineer with a data science background, building and testing secure LLM systems. In my free time, I build apps that make my life easier.</p>
+
+        <dl class="facts">
+          <div><dt>based in</dt><dd>Oslo, Norway</dd></div>
+        </dl>
+
+        <p class="cta">
+          <a class="btn primary" href="mailto:elemandana@gmail.com">say hi</a>
+          <a class="btn" href="https://www.linkedin.com/in/elenimandana/">LinkedIn</a>
+          <a class="btn" href="https://github.com/helenmand">GitHub</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="experience" class="section" aria-labelledby="experience-title">
+      <h2 id="experience-title" class="sec-title reveal">experience</h2>
+
+      <article class="card job reveal">
+        <div>
+          <p class="when">Nov 2025 – Sep 2026</p>
+        </div>
+        <div>
+          <h3>AI Engineer &amp; Python Developer <span class="at">@ Nairon</span></h3>
+          <ul class="points">
+            <li><strong>Built the agent evaluation service end to end.</strong> Synthetic callers, including adversarial ones, test production voice agents. Graph-coverage algorithms walk every path through a conversation flow, and an AI grader scores each run on correctness and safety.</li>
+            <li><strong>Contributed to the core voice agent</strong> and its conversation logic.</li>
+            <li><strong>Contributed to the retrieval layer</strong> the agents query: a Milvus index with hybrid dense and sparse search, and an Airflow-managed index lifecycle with deletion APIs that keep the data consistent.</li>
+          </ul>
+          <ul class="chips" aria-label="Technologies">
+            <li>Python</li><li>Azure OpenAI</li><li>FastAPI</li><li>LiveKit</li><li>Milvus</li><li>Airflow</li><li>Docker</li><li>CI/CD</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section id="education" class="section" aria-labelledby="education-title">
+      <h2 id="education-title" class="sec-title reveal">education</h2>
+
+      <div class="tabs reveal">
+        <div class="tablist" role="tablist" aria-label="Education" aria-orientation="vertical">
+          <button class="tab" role="tab" id="tab-msc" aria-controls="panel-msc" aria-selected="true"><span class="tab-t">MSc</span><span class="tab-s">AUTh</span></button>
+          <button class="tab" role="tab" id="tab-ntnu" aria-controls="panel-ntnu" aria-selected="false" tabindex="-1"><span class="tab-t">Erasmus+</span><span class="tab-s">NTNU</span></button>
+          <button class="tab" role="tab" id="tab-bsc" aria-controls="panel-bsc" aria-selected="false" tabindex="-1"><span class="tab-t">BSc</span><span class="tab-s">AUTh</span></button>
+        </div>
+
+        <div class="panels">
+          <article class="panel is-active" role="tabpanel" id="panel-msc" aria-labelledby="tab-msc">
+            <h3>MSc in Data and Web Science <span class="at">@ Aristotle University of Thessaloniki</span></h3>
+            <p class="when">2023 – 2025</p>
+            <p class="badge"><span aria-hidden="true">★</span> Google DeepMind Scholarship, fully funded</p>
+            <p>Thesis on detecting vulnerabilities in Ethereum smart contracts with fine-tuned open-source LLMs, published as a peer-reviewed paper.</p>
+            <a class="pub" href="https://www.mdpi.com/2079-9292/14/16/3226">
+              <span class="pub-kind">Publication · Electronics (MDPI), 2025</span>
+              <span class="pub-title">EVuLLM: Ethereum Smart Contract Vulnerability Detection using LLMs</span>
+              <span class="pub-note">First author · 94.78% accuracy with QLoRA on lightweight models, code released publicly</span>
+            </a>
+          </article>
+
+          <article class="panel" role="tabpanel" id="panel-ntnu" aria-labelledby="tab-ntnu">
+            <h3>Erasmus+ Exchange in Computer Science <span class="at">@ NTNU, Trondheim</span></h3>
+            <p class="when">2023</p>
+            <p>The last semester of my BSc at the Norwegian University of Science and Technology, funded by an Erasmus+ scholarship.</p>
+            <ul class="chips" aria-label="Courses">
+              <li>Intelligent Text Analytics and Language Understanding</li>
+              <li>Software Security and Data Privacy</li>
+            </ul>
+          </article>
+
+          <article class="panel" role="tabpanel" id="panel-bsc" aria-labelledby="tab-bsc">
+            <h3>BSc in Computer Science <span class="at">@ Aristotle University of Thessaloniki</span></h3>
+            <p class="when">2019 – 2023</p>
+            <p>Specialised in Data and Web Management. Thesis on detecting fake microblogging accounts with machine learning (<a class="ext" href="https://ikee.lib.auth.gr/record/352041/?ln=en">F1 of 0.997 with LightGBM</a>).</p>
+            <ul class="beyond" aria-label="Beyond the classroom">
+              <li><strong>ACM Student Chapter volunteer.</strong> Student ambassador at the Thessaloniki International Fair, coordinated GRCPC registrations, planned campus tours and built challenges for Days of Coding.</li>
+              <li><strong>GRCPC 2023.</strong> 2nd within AUTh at the first programming contest of its kind held in Greece.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="sec-title reveal">projects</h2>
+
+      <div class="reveal">
+        <ul class="track" role="region" aria-label="Featured projects" tabindex="0">
+          <li>
+            <article class="card project">
+              <div class="thumb" aria-hidden="true">
+                <svg viewBox="0 0 280 110" preserveAspectRatio="xMidYMid meet">
+                  <g class="fill-muted">
+                    <rect x="24" y="30" width="3" height="48"/><rect x="31" y="30" width="6" height="48"/><rect x="41" y="30" width="2" height="48"/><rect x="47" y="30" width="5" height="48"/><rect x="56" y="30" width="3" height="48"/><rect x="63" y="30" width="7" height="48"/><rect x="74" y="30" width="2" height="48"/><rect x="80" y="30" width="4" height="48"/><rect x="88" y="30" width="3" height="48"/><rect x="95" y="30" width="6" height="48"/>
+                  </g>
+                  <line class="base" x1="140" y1="86" x2="256" y2="86"/>
+                  <rect class="bar" x="150" y="46" width="24" height="40" rx="3"/>
+                  <rect class="bar best" x="184" y="62" width="24" height="24" rx="3"/>
+                  <rect class="bar" x="218" y="36" width="24" height="50" rx="3"/>
+                </svg>
+              </div>
+              <div class="p-body">
+                <p class="tag">Personal · AI-Assisted</p>
+                <h3>Price Tracker</h3>
+                <p>Compares Norwegian grocery prices by package and by unit price. Reads prices from shelf-label photos with Gemini and looks up barcodes through the Kassalapp API, with the shared database secured by Google sign-in and row-level security.</p>
+                <ul class="chips" aria-label="Technologies"><li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>Gemini</li></ul>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="card project">
+              <div class="thumb" aria-hidden="true">
+                <svg viewBox="0 0 280 110" preserveAspectRatio="xMidYMid meet">
+                  <rect class="clip a" x="20" y="22" width="86" height="16" rx="4"/><rect class="clip" x="112" y="22" width="52" height="16" rx="4"/><rect class="clip a" x="190" y="22" width="70" height="16" rx="4"/>
+                  <rect class="clip" x="20" y="46" width="48" height="16" rx="4"/><rect class="clip a" x="74" y="46" width="90" height="16" rx="4"/><rect class="clip" x="190" y="46" width="44" height="16" rx="4"/>
+                  <rect class="clip" x="20" y="70" width="110" height="16" rx="4"/><rect class="clip" x="136" y="70" width="28" height="16" rx="4"/><rect class="clip a" x="190" y="70" width="58" height="16" rx="4"/>
+                  <line class="head" x1="177" y1="12" x2="177" y2="96"/><path class="head-cap" d="M171 8h12l-6 8z"/>
+                </svg>
+              </div>
+              <div class="p-body">
+                <p class="tag">Freelance · Dignity Media</p>
+                <h3>Video Edit Automation</h3>
+                <p>A DaVinci Resolve tool that repositions, cuts and composites clips from the timeline's own cues, cutting editing time by 40%.</p>
+                <ul class="chips" aria-label="Technologies"><li>Python</li><li>DaVinci Resolve API</li></ul>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="card project">
+              <div class="thumb" aria-hidden="true">
+                <svg viewBox="0 0 280 110" preserveAspectRatio="xMidYMid meet">
+                  <line class="base" x1="28" y1="14" x2="28" y2="90"/><line class="base" x1="28" y1="90" x2="258" y2="90"/>
+                  <path class="curve dim" d="M28 34 C 80 40, 140 44, 256 46"/>
+                  <path class="curve" d="M28 22 C 56 70, 100 80, 256 84"/>
+                  <circle class="end" cx="256" cy="84" r="4"/>
+                </svg>
+              </div>
+              <div class="p-body">
+                <p class="tag">Research · AUTh</p>
+                <h3>LLM Fine-Tuning at DataLab</h3>
+                <p>Fine-tuned LLMs on HPC infrastructure to classify political text, improving F1 by about 8 percentage points across systematic experiments.</p>
+                <ul class="chips" aria-label="Technologies"><li>LoRA / QLoRA</li><li>PyTorch</li><li>Slurm</li></ul>
+              </div>
+            </article>
+          </li>
+        </ul>
+
+        <div class="gallery-foot">
+          <div class="g-ctrls" hidden>
+            <button type="button" class="g-btn prev" aria-label="Previous project"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+            <button type="button" class="g-btn next" aria-label="Next project"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+          </div>
+          <a class="ext more-link" href="https://github.com/helenmand">more projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section" aria-labelledby="certs-title">
+      <h2 id="certs-title" class="sec-title reveal">certifications &amp; courses</h2>
+      <ul class="certs reveal">
+        <li>
+          <a class="cert" href="https://coursera.org/share/02dc908368d742feef50811979d0c15b">
+            <span class="cert-by">Coursera · 2025</span>
+            <span class="cert-name">Google Cybersecurity Certificate</span>
+          </a>
+        </li>
+        <li>
+          <a class="cert" href="https://learn.deeplearning.ai/accomplishments/a9ffc4f9-ec57-4d13-9c18-24cf76f3ebdf?usp=sharing">
+            <span class="cert-by">DeepLearning.AI · 2024</span>
+            <span class="cert-name">Advanced Retrieval with Chroma</span>
+          </a>
+        </li>
+        <li>
+          <a class="cert" href="https://learn.deeplearning.ai/accomplishments/9680e1fd-9ff5-4cb1-a52e-fd0ef05f9555?usp=sharing">
+            <span class="cert-by">DeepLearning.AI · 2024</span>
+            <span class="cert-name">Improving Accuracy of LLM Applications</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="sec-title reveal">say hi</h2>
+      <p class="contact-lead reveal">The easiest way to reach me is by email or LinkedIn.</p>
+      <p class="cta reveal">
+        <a class="btn primary" href="mailto:elemandana@gmail.com">email</a>
+        <a class="btn" href="https://www.linkedin.com/in/elenimandana/">LinkedIn</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Eleni Mandana · Oslo, Norway</p>
+  </footer>
 </body>
 </html>
