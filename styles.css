@@ -131,7 +131,7 @@ h1 em { font-style: normal; font-weight: 700; color: var(--accent); }
 
 a.ext { color: var(--ink); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent) 55%, transparent); text-underline-offset: 3px; transition: color 0.15s; }
 a.ext:hover { color: var(--accent); }
-.pub-title::after, .more-link::after { content: ' ↗'; color: var(--accent); }
+.pub-title::after, .more-link::after, .p-link::after { content: ' ↗'; color: var(--accent); }
 
 /* experience */
 .job { display: grid; grid-template-columns: 200px 1fr; gap: 12px 32px; }
@@ -189,6 +189,7 @@ a.ext:hover { color: var(--accent); }
 .thumb svg { display: block; width: 100%; height: auto; max-height: 112px; }
 .p-body { display: flex; flex: 1; flex-direction: column; gap: 8px; padding: 20px 22px 22px; }
 .project p { font-size: 0.9375rem; line-height: 1.55; }
+.project .p-link { align-self: flex-start; margin-top: 4px; font-size: 0.9375rem; }
 .project .chips { margin-top: auto; padding-top: 10px; }
 .tag { font: 400 0.6875rem var(--mono); text-transform: uppercase; letter-spacing: 0.04em; color: var(--accent) !important; }
 
@@ -209,9 +210,6 @@ a.ext:hover { color: var(--accent); }
 .thumb .clip.a { fill: color-mix(in srgb, var(--accent) 55%, transparent); }
 .thumb .head { stroke: var(--pulse); stroke-width: 1.5; }
 .thumb .head-cap { fill: var(--pulse); }
-.thumb .curve { fill: none; stroke: var(--accent); stroke-width: 2.5; stroke-linecap: round; }
-.thumb .curve.dim { stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 4 5; opacity: 0.7; }
-.thumb .end { fill: var(--pulse); }
 
 /* certifications and courses: three tiles on one line */
 .certs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }

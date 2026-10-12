@@ -74,12 +74,13 @@
         <div>
           <h3>AI Engineer &amp; Python Developer <span class="at">@ Nairon</span></h3>
           <ul class="points">
-            <li><strong>Built the agent evaluation service end to end.</strong> Synthetic callers, including adversarial ones, test production voice agents. Graph-coverage algorithms walk every path through a conversation flow, and an AI grader scores each run on correctness and safety.</li>
-            <li><strong>Contributed to the core voice agent</strong> and its conversation logic.</li>
-            <li><strong>Contributed to the retrieval layer</strong> the agents query: a Milvus index with hybrid dense and sparse search, and an Airflow-managed index lifecycle with deletion APIs that keep the data consistent.</li>
+            <li>Built the agent evaluation service end to end: synthetic callers probe production voice agents for prompt injection, resource exhaustion and political language, and an LLM-as-a-judge scores each run from 1 to 5 on correctness, helpfulness and safety.</li>
+            <li>Cut the test paths for one conversation flow from 200+ to around 15 with an edge-coverage algorithm that still exercises every edge.</li>
+            <li>Developed the core voice agent: how it steers a conversation, the prompts behind it and its knowledge retrieval.</li>
+            <li>Built the vector-search and data-lifecycle layer of the ingestion pipeline (hybrid dense and sparse search on Milvus, Airflow-managed indexing, deletion APIs) and set up its unit and end-to-end tests and CI.</li>
           </ul>
           <ul class="chips" aria-label="Technologies">
-            <li>Python</li><li>Azure OpenAI</li><li>FastAPI</li><li>LiveKit</li><li>Milvus</li><li>Airflow</li><li>Docker</li><li>CI/CD</li>
+            <li>Python</li><li>Azure OpenAI</li><li>FastAPI</li><li>LiveKit</li><li>Milvus</li><li>Airflow</li><li>LLM-as-a-judge</li><li>Docker</li><li>CI/CD</li>
           </ul>
         </div>
       </article>
@@ -179,17 +180,17 @@
             <article class="card project">
               <div class="thumb" aria-hidden="true">
                 <svg viewBox="0 0 280 110" preserveAspectRatio="xMidYMid meet">
-                  <line class="base" x1="28" y1="14" x2="28" y2="90"/><line class="base" x1="28" y1="90" x2="258" y2="90"/>
-                  <path class="curve dim" d="M28 34 C 80 40, 140 44, 256 46"/>
-                  <path class="curve" d="M28 22 C 56 70, 100 80, 256 84"/>
-                  <circle class="end" cx="256" cy="84" r="4"/>
+                  <rect class="clip" x="20" y="20" width="44" height="16" rx="4"/><rect class="clip" x="70" y="20" width="30" height="16" rx="4"/><rect class="clip a" x="106" y="20" width="56" height="16" rx="4"/><rect class="clip" x="168" y="20" width="36" height="16" rx="4"/><rect class="clip a" x="210" y="20" width="48" height="16" rx="4"/>
+                  <rect class="clip" x="20" y="44" width="50" height="16" rx="4"/><rect class="clip a" x="76" y="44" width="38" height="16" rx="4"/><rect class="clip" x="120" y="44" width="32" height="16" rx="4"/><rect class="clip a" x="158" y="44" width="58" height="16" rx="4"/><rect class="clip" x="222" y="44" width="36" height="16" rx="4"/>
+                  <rect class="bar" x="20" y="76" width="238" height="10" rx="5"/><rect class="bar best" x="20" y="76" width="221" height="10" rx="5"/>
                 </svg>
               </div>
               <div class="p-body">
-                <p class="tag">Research · AUTh</p>
-                <h3>LLM Fine-Tuning at DataLab</h3>
-                <p>Fine-tuned LLMs on HPC infrastructure to classify political text, improving F1 by about 8 percentage points across systematic experiments.</p>
-                <ul class="chips" aria-label="Technologies"><li>LoRA / QLoRA</li><li>PyTorch</li><li>Slurm</li></ul>
+                <p class="tag">Personal · NLP</p>
+                <h3>Explainable Sentiment Classifier</h3>
+                <p>Fine-tuned DistilBERT on the IMDB reviews dataset to a 93% F1-score. A Dockerized Streamlit app serves it, showing a confidence score and highlighting the words that drove each prediction with Layer Integrated Gradients.</p>
+                <a class="ext p-link" href="https://github.com/helenmand/IMDB-movie-reviews-sentiment-explainer">View on GitHub</a>
+                <ul class="chips" aria-label="Technologies"><li>DistilBERT</li><li>Hugging Face</li><li>Captum</li><li>Streamlit</li></ul>
               </div>
             </article>
           </li>
