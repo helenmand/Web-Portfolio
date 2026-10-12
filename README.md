@@ -1,15 +1,14 @@
 # Web-Portfolio
 
-Personal portfolio of Eleni Mandana. Plain HTML, CSS and a small script with no build step and no dependencies, served as is by GitHub Pages.
+Personal portfolio of Eleni Mandana. Plain HTML, CSS and a small script with no build step and no libraries, served as is by GitHub Pages. The only external request is the Google Fonts stylesheet.
 
 ## Files
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Content and page structure |
-| `styles.css` | Design tokens (top of file) and all styling |
-| `app.js` | Plays the conversation and remembers progress for the browser session |
-| `removed-content.json` | Content from the previous version of the site, kept for the CV |
+| `index.html` | Content and page structure: hello, experience, education, projects, certifications, contact |
+| `styles.css` | Design tokens (top of file, with a light variant) and all styling |
+| `app.js` | The hero graph animation, nav highlighting, scroll reveal, education tabs and the projects gallery |
 
 ## Run locally
 
